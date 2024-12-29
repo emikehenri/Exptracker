@@ -1,0 +1,33 @@
+
+
+:root{
+    --font-fam: "Rubik", serif;
+    --main-color: #f2f4ff;
+    --font-color: #191919;
+    --alt-color: #03012c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-fam);
+}
+body{
+    width: 100%;
+    padding: 10px 80px;
+    background-color: var(--main-color);
+}
+.nav_container{
+    padding: 10px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.text_logo{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 18px;
+}
