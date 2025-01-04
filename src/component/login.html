@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', serif;
+        }
+        body{
+            background-color: #191919;
+        }
+        .login_title{
+            margin: 0px;
+            font-family: 'Rubik', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color:#191919;
+        }
+    </style>
+    
+  <div class="container-fluid d-flex align-items-center justify-content-center vh-100 shadow-sm">
+    <div class="row w-75">
+      <div class="col-md-6 mx-auto">
+        <div class="p-2 d-flex flex-row align-items-center">
+            <i class="bi bi-calculator-fill text-white fs-1"></i>
+            <h1 class="text-white mx-auto fw-light">My Expense Tracker</h1>
+        </div>
+        <div class="card shadow">
+          <div class="card-header text-center">
+            <i class="bi bi-person-circle fs-3"></i>
+            <h4 class="login_title">Login</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 shadow-sm my-1">Login</button>
+            </form>
+          </div>
+          <div class="card-footer text-center">
+            <small>Don't have an account? <a href="#">Register here</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

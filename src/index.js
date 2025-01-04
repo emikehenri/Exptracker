@@ -1,0 +1,1 @@
+let exp = document.querySelector('#exp');
