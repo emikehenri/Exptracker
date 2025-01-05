@@ -14,8 +14,6 @@
     font-family: var(--font-fam);
 }
 body{
-    width: 100%;
-    padding: 10px 80px;
     background-color: var(--main-color);
 }
 .nav_container{
@@ -30,4 +28,7 @@ body{
     text-decoration: none;
     color: var(--font-color);
     font-size: 18px;
+}
+.exp_log{
+    color: var(--alt-color);
 }
