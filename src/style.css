@@ -14,10 +14,10 @@
     font-family: var(--font-fam);
 }
 body{
+    padding: 0px;
     background-color: var(--main-color);
 }
 .nav_container{
-    padding: 10px;
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
@@ -31,4 +31,15 @@ body{
 }
 .exp_log{
     color: var(--alt-color);
+}
+#bgimg{
+    background-image: url("../Assets/backgorund.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#activeitems:hover{
+ background-color: rgb(230, 226, 226);
+}
+.card-body{
+    padding: 0;
 }
