@@ -19,7 +19,7 @@
     <div class="row">
       <!-- Sidebar -->
       <nav class="col-md-3 col-lg-2 d-md-block bg-light shadow-sm sidebar collapse d-flex justify-content-between" id="sidebarMenu">
-        <div class="position-fixed mt-5 min-vh-100">
+        <div class="position-fixed d-md-block mt-5 min-md-vh-100">
           <ul class="nav flex-column">
             <li id = "activeitems" class="nav-item py-1 rounded-pill w-100">
               <a class="nav-link fs-6 text-dark font-bold" href="./index.html">
@@ -169,10 +169,10 @@
         <div class="container-fluid">
           <div class="row px-2 gap-2">
             <!-- Main Column for 2x2 Grid -->
-            <div class="col-md-7 bg-primary px-2">
+            <div class="col-md-7 border-1 rounded px-2">
               <div class="row g-3 px-4 py-4">
                 <!-- First Row of the Grid -->
-                <div class="col-6 bg-primary d-flex justify-content-center align-items-center">
+                <div class="col-6 g-3 shadow-sm d-flex justify-content-center align-items-center">
                   <!-- Daily Needs -->
                   <div class="card">
                     <div class="card-body">
@@ -180,7 +180,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 bg-danger d-flex justify-content-center align-items-center">
+                <div class="col-6  d-flex justify-content-center align-items-center">
                   <div class="card">
                     <div class="card-body">
                       <canvas id="mySaving" class="chart"></canvas>
@@ -188,17 +188,17 @@
                   </div>
                 </div>
                 <!-- Second Row of the Grid -->
-                <div class="col-6 bg-danger d-flex justify-content-center align-items-center">
+                <div class="col-6 d-flex justify-content-center align-items-center">
                   <div class="card">
                     <div class="card-body">
                       <canvas id="myEmergency" class="chart"></canvas>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 bg-danger d-flex justify-content-center align-items-center">
+                <div class="col-6 d-flex justify-content-center align-items-center">
                   <div class="card">
                     <div class="card-body">
-                      <canvas id="mySalary" class="chart"></canvas>
+                      <canvas id="mySalary" class="w-50 h-50"></canvas>
                     </div>
                   </div>
                 </div>
@@ -227,6 +227,8 @@
 <script>
   const canv = document.getElementById('myChart');
   const save = document.getElementById('mySaving');
+  const emergency = document.getElementById('myEmergency');
+  const salary = document.getElementById("mySalary")
 function _firstchart() {
   new Chart(canv, {
     type: 'doughnut',
@@ -247,7 +249,7 @@ function _firstchart() {
     }
   });
 }
-_firstchart();
+
 
 function _secondchart() {
   new Chart(save, {
@@ -269,7 +271,52 @@ function _secondchart() {
     }
   });
 }
-_secondchart()
+
+function _thirdchart(){
+    new Chart(emergency, {
+    type: 'doughnut',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+function _fourthchart(){
+    new Chart(salary, {
+    type: 'doughnut',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+_firstchart();
+_secondchart();
+_thirdchart();
+_fourthchart();
 </script>
 </body>
 </html>
