@@ -19,7 +19,7 @@
     <div class="row">
       <!-- Sidebar -->
       <nav class="col-md-3 col-lg-2 d-md-block bg-light shadow-sm sidebar collapse d-flex justify-content-between" id="sidebarMenu">
-        <div class="position-fixed d-md-block mt-5 min-md-vh-100">
+        <div id="navres" class="d-md-block mt-5 min-md-vh-100">
           <ul class="nav flex-column">
             <li id = "activeitems" class="nav-item py-1 rounded-pill w-100">
               <a class="nav-link fs-6 text-dark font-bold" href="./index.html">
@@ -170,37 +170,12 @@
           <div class="row px-2 gap-2">
             <!-- Main Column for 2x2 Grid -->
             <div class="col-md-7 border-1 rounded px-2">
-              <div class="row g-3 px-4 py-4">
-                <!-- First Row of the Grid -->
-                <div class="col-6 g-3 shadow-sm d-flex justify-content-center align-items-center">
-                  <!-- Daily Needs -->
-                  <div class="card">
-                    <div class="card-body">
-                      <canvas id="myChart" class="chart"></canvas>
-                    </div>
-                  </div>
+              <div class="card">
+                <div class="card-header">
+                  <h1>Daily Needs Chart</h1>
                 </div>
-                <div class="col-6  d-flex justify-content-center align-items-center">
-                  <div class="card">
-                    <div class="card-body">
-                      <canvas id="mySaving" class="chart"></canvas>
-                    </div>
-                  </div>
-                </div>
-                <!-- Second Row of the Grid -->
-                <div class="col-6 d-flex justify-content-center align-items-center">
-                  <div class="card">
-                    <div class="card-body">
-                      <canvas id="myEmergency" class="chart"></canvas>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6 d-flex justify-content-center align-items-center">
-                  <div class="card">
-                    <div class="card-body">
-                      <canvas id="mySalary" class="w-50 h-50"></canvas>
-                    </div>
-                  </div>
+                <div class="card-body">
+                  <canvas id="myChart"></canvas>
                 </div>
               </div>
             </div>
@@ -231,7 +206,7 @@
   const salary = document.getElementById("mySalary")
 function _firstchart() {
   new Chart(canv, {
-    type: 'doughnut',
+    type: 'line',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
@@ -241,11 +216,13 @@ function _firstchart() {
       }]
     },
     options: {
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true
         }
-      }
+      },
+      
     }
   });
 }
@@ -317,6 +294,6 @@ _firstchart();
 _secondchart();
 _thirdchart();
 _fourthchart();
-</script>
+</script>-->
 </body>
 </html>

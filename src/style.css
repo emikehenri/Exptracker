@@ -43,3 +43,13 @@ body{
 .card-body{
     padding: 0;
 }
+#navres {
+  position: fixed;
+}
+
+@media screen and (max-width: 768px){
+  #navres{
+    position: sticky;
+    top: 0px;
+  }
+}
