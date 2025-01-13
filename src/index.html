@@ -167,22 +167,39 @@
           </div>
         </div>
         <div class="container-fluid">
-          <div class="row px-2 gap-2">
+          <div class="row gap-4 d-flex flex-row">
             <!-- Main Column for 2x2 Grid -->
-            <div class="col-md-7 border-1 rounded px-2">
-              <div class="card">
-                <div class="card-header">
-                  <h1>Daily Needs Chart</h1>
+            <div class="col-md-6 border-1 rounded">
+              <div class="card shadow-sm">
+                <div class="card-header bg-transparent border-0 p-1 d-flex
+                flex-row justify-content-between align-items-center">
+                  <h1 class="p-2 mt-1 m-0" style="font-size:18px;">Daily Needs Chart</h1>
+                  <button class="btn btn-sm btn-none px-2">
+                  <i class="ri-more-2-fill fs-5"></i>
+                  </button>
                 </div>
                 <div class="card-body">
-                  <canvas id="myChart"></canvas>
+                  <canvas id="myChart" width="200" height="200"></canvas>
                 </div>
               </div>
             </div>
         
             <!-- Another Column -->
-            <div class="col-md-3 bg-danger px-2">
-              <h1>hello</h1>
+            <div class="col-md-5 bg-danger px-2">
+              <div class="col-md-6 border-1 rounded">
+              <div class="card shadow-sm">
+                <div class="card-header bg-transparent border-0 p-1 d-flex
+                flex-row justify-content-between align-items-center">
+                  <h1 class="p-2 mt-1 m-0" style="font-size:18px;">Daily Needs Chart</h1>
+                  <button class="btn btn-sm btn-none px-2">
+                  <i class="ri-more-2-fill fs-5"></i>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <canvas id="mySaving" width="200" height="200"></canvas>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -230,7 +247,7 @@ function _firstchart() {
 
 function _secondchart() {
   new Chart(save, {
-    type: 'doughnut',
+    type: 'line',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
@@ -240,6 +257,7 @@ function _secondchart() {
       }]
     },
     options: {
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true
