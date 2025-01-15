@@ -98,7 +98,7 @@
           </div>
         </div>
         <!-- analysis chart -->
-        <div class="row py-2 px-2">
+        <div class="row py-2 px-2 flex-wrap">
           <!-- Column 1 -->
           <div class="col-md-4">
             <div class="card text-dark mb-3 shadow-sm">
@@ -165,44 +165,69 @@
               </div>
             </div>
           </div>
+ <div class="container-fluid py-3">
+  <div class="row g-4">
+    <!-- First Column -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0" style="font-size:18px;">Daily Needs Chart</h1>
+          <button class="btn btn-sm btn-none">
+            <i class="ri-more-2-fill fs-5"></i>
+          </button>
         </div>
-        <div class="container-fluid">
-          <div class="row gap-4 d-flex flex-row">
-            <!-- Main Column for 2x2 Grid -->
-            <div class="col-md-6 border-1 rounded">
-              <div class="card shadow-sm">
-                <div class="card-header bg-transparent border-0 p-1 d-flex
-                flex-row justify-content-between align-items-center">
-                  <h1 class="p-2 mt-1 m-0" style="font-size:18px;">Daily Needs Chart</h1>
-                  <button class="btn btn-sm btn-none px-2">
-                  <i class="ri-more-2-fill fs-5"></i>
-                  </button>
-                </div>
-                <div class="card-body">
-                  <canvas id="myChart" width="200" height="200"></canvas>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Another Column -->
-            <div class="col-md-5 bg-danger px-2">
-              <div class="col-md-6 border-1 rounded">
-              <div class="card shadow-sm">
-                <div class="card-header bg-transparent border-0 p-1 d-flex
-                flex-row justify-content-between align-items-center">
-                  <h1 class="p-2 mt-1 m-0" style="font-size:18px;">Daily Needs Chart</h1>
-                  <button class="btn btn-sm btn-none px-2">
-                  <i class="ri-more-2-fill fs-5"></i>
-                  </button>
-                </div>
-                <div class="card-body">
-                  <canvas id="mySaving" width="200" height="200"></canvas>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
+        <div class="card-body">
+          <canvas id="myChart" width="150" height="150"></canvas>
         </div>
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0" style="font-size:18px;">Savings Chart</h1>
+          <button class="btn btn-sm btn-none">
+            <i class="ri-more-2-fill fs-5"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <canvas id="mySaving" width="150" height="150"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0" style="font-size:18px;">Expense Chart</h1>
+          <button class="btn btn-sm btn-none">
+            <i class="ri-more-2-fill fs-5"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <canvas id="myEmergency" width="150" height="150"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth Column -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
+          <h1 class="mb-0" style="font-size:18px;">Income Chart</h1>
+          <button class="btn btn-sm btn-none">
+            <i class="ri-more-2-fill fs-5"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <canvas id="mySalary" width="200" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         
         </div>
         </div>
@@ -269,7 +294,7 @@ function _secondchart() {
 
 function _thirdchart(){
     new Chart(emergency, {
-    type: 'doughnut',
+    type: 'bar',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
@@ -279,6 +304,7 @@ function _thirdchart(){
       }]
     },
     options: {
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true
@@ -289,7 +315,7 @@ function _thirdchart(){
 }
 function _fourthchart(){
     new Chart(salary, {
-    type: 'doughnut',
+    type: 'line',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
@@ -299,6 +325,7 @@ function _fourthchart(){
       }]
     },
     options: {
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true
