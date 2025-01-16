@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Tracker Dashboard</title>
   <link rel="stylesheet" href="./style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href ="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
@@ -65,17 +67,17 @@
               <ul class="navbar-nav d-flex flex-row align-items-center gap-2">
                 <li class="nav-item">
                   <button id="activeitems" class="shadow-sm btn btn-sm rounded-circle">
-                    <i class="ri-notification-line fs-5"></i>
+                    <i class="ri-notification-line fs-6"></i>
                   </button>
                 </li>
                 <li class="nav-item">
                   <button id="activeitems" class="shadow-sm btn btn-sm rounded-circle">
-                    <i class="ri-sun-line fs-5"></i>
+                    <i class="ri-sun-line fs-6"></i>
                   </button>
                 </li>
                 <li class="nav-item">
-                  <button id="activeitems" class="shadow-sm btn btn-sm rounded-pill">
-                    <img src="../Assets/profile.webp" class="rounded-circle" width="50" height="50" alt="profimg">
+                  <button id="activeitems" class="shadow-sm btn btn-sm rounded-pill d-flex flex-row align-items-center g-2">
+                    <img src="../Assets/profile.webp" class="rounded-circle" width="40" height="40" alt="profimg">
                     View Profile
                   </button>
                 </li>
@@ -92,7 +94,7 @@
             <div class="card-body d-flex flex-lg-row justify-content-start align-items-center">
               <div class="p-1 lh-1">
                 <h1 class="fs-1 text-light fw-bold">Hello Mike</h1>
-                <p class="fs-5 text-light">Welcome to your Expense Tracker</p>
+                <p class="fs-6 text-light">Welcome to your Expense Tracker</p>
               </div>
             </div>
           </div>
@@ -106,7 +108,7 @@
                 <!-- Card icon container -->
                 <div class="d-flex flex-row align-items-center gap-3">
                   <div class="p-2 shadow-sm bg-info bg-primary-subtle d-flex justify-content-center align-items-center rounded">
-                    <i class="ri-shopping-bag-3-line display-5"></i>
+                    <i class="ri-shopping-bag-3-line display-6"></i>
                   </div>
                   <!-- Text container -->
                   <div>
@@ -129,7 +131,7 @@
                 <div class="d-flex flex-row align-items-center gap-3">
                   <div class="p-2 bg-danger-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
                     <!-- <i class="mt-2 bi bi-piggy-bank display-3 text-dark"></i> -->
-                    <i class="ri-bank-line display-5"></i>
+                    <i class="ri-bank-line display-6"></i>
                   </div>
                   <!-- Text container -->
                   <div>
@@ -151,7 +153,7 @@
                 <!-- Card icon container -->
                 <div class="d-flex flex-row align-items-center gap-3">
                   <div class="p-2 bg-info-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
-                    <i class="ri-bank-card-line display-5"></i>
+                    <i class="ri-bank-card-line display-6"></i>
                   </div>
                   <!-- Text container -->
                   <div>
@@ -173,7 +175,7 @@
         <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
           <h1 class="mb-0" style="font-size:18px;">Daily Needs Chart</h1>
           <button class="btn btn-sm btn-none">
-            <i class="ri-more-2-fill fs-5"></i>
+            <i class="ri-more-2-fill fs-6"></i>
           </button>
         </div>
         <div class="card-body">
@@ -188,7 +190,7 @@
         <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
           <h1 class="mb-0" style="font-size:18px;">Savings Chart</h1>
           <button class="btn btn-sm btn-none">
-            <i class="ri-more-2-fill fs-5"></i>
+            <i class="ri-more-2-fill fs-6"></i>
           </button>
         </div>
         <div class="card-body">
@@ -203,7 +205,7 @@
         <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
           <h1 class="mb-0" style="font-size:18px;">Expense Chart</h1>
           <button class="btn btn-sm btn-none">
-            <i class="ri-more-2-fill fs-5"></i>
+            <i class="ri-more-2-fill fs-6"></i>
           </button>
         </div>
         <div class="card-body">
@@ -218,12 +220,139 @@
         <div class="card-header bg-transparent border-0 p-2 d-flex justify-content-between align-items-center">
           <h1 class="mb-0" style="font-size:18px;">Income Chart</h1>
           <button class="btn btn-sm btn-none">
-            <i class="ri-more-2-fill fs-5"></i>
+            <i class="ri-more-2-fill fs-6"></i>
           </button>
         </div>
         <div class="card-body">
-          <canvas id="mySalary" width="200" height="200"></canvas>
+          <canvas id="mySalary" width="150" height="150"></canvas>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid px-2 mt-4">
+  <div class="row gap-0 d-flex justify-content-between">
+    <div class="col-md-7">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-transparent d-flex flex-row align-items-center justify-content-between">
+          <h1 class="fs-5 m-0">Daily History</h1>
+          <button class="btn btn-sm">
+            <i class="ri-more-2-fill fs-6"></i>
+          </button>
+          
+        </div>
+        <div class="card-body p-0 overflow-auto" style="max-height: calc(50vh);">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex flex-row align-items-center justify-content-between">
+              <!--  -->
+              <div class="py-2">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <div class="p-2 bg-info-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
+                    <i class="ri-t-shirt-line fs-3"></i>
+                  </div>
+                  <!-- Text container -->
+                  <div>
+                    <h1 class="fw-bold mt-0"style="font-size: 16px;">Penshoppe Jacket</h1>
+                    <p class="fs-6 fw-light">Category: <span class="badge text-bg-primary text-dark">Clothes</span></p>
+                  </div>
+                </div>
+              </div>
+<!-- price section -->
+              <div>
+                <p class="fs-5">+799</p>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex flex-row align-items-center justify-content-between">
+              <!--  -->
+              <div class="py-2">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <div class="p-2 d-flex justify-content-center align-items-center rounded shadow-sm">
+                    <i class="ri-cup-line fs-3"></i>
+                  </div>
+                  <!-- Text container -->
+                  <div>
+                    <h1 class="fw-bold mt-0"style="font-size: 16px;">Coffee</h1>
+                    <p class="fs-6 fw-light">Category: <span class="badge text-bg-success text-dark">Food & Drinks</span></p>
+                  </div>
+                </div>
+              </div>
+<!-- price section -->
+              <div>
+                <p class="fs-5">+30</p>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex flex-row align-items-center justify-content-between">
+              <!--  -->
+              <div class="py-2">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <div class="p-2 bg-info-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
+                    <i class="ri-capsule-line fs-3"></i>
+                  </div>
+                  <!-- Text container -->
+                  <div>
+                    <h1 class="fw-bold mt-0"style="font-size: 16px;">Mefenamic Acid</h1>
+                    <p class="fs-6 fw-light">Category: <span class="badge text-bg-danger text-dark">Health</span></p>
+                  </div>
+                </div>
+              </div>
+<!-- price section -->
+              <div>
+                <p class="fs-5">+50</p>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex flex-row align-items-center justify-content-between">
+              <!--  -->
+              <div class="py-2">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <div class="p-2 bg-info-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
+                    <i class="ri-t-shirt-line fs-3"></i>
+                  </div>
+                  <!-- Text container -->
+                  <div>
+                    <h1 class="fw-bold mt-0"style="font-size: 16px;">Penshoppe Jacket</h1>
+                    <p class="fs-6 fw-light">Category: <span class="badge text-bg-primary text-dark">Clothes</span></p>
+                  </div>
+                </div>
+              </div>
+<!-- price section -->
+              <div>
+                <p class="fs-5">+799</p>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex flex-row align-items-center justify-content-between">
+              <!--  -->
+              <div class="py-2">
+                <div class="d-flex flex-row align-items-center gap-3">
+                  <div class="p-2 bg-info-subtle d-flex justify-content-center align-items-center rounded shadow-sm">
+                    <i class="ri-t-shirt-line fs-3"></i>
+                  </div>
+                  <!-- Text container -->
+                  <div>
+                    <h1 class="fw-bold mt-0"style="font-size: 16px;">Penshoppe Jacket</h1>
+                    <p class="fs-6 fw-light">Category: <span class="badge text-bg-primary text-dark">Clothes</span></p>
+                  </div>
+                </div>
+              </div>
+<!-- price section -->
+              <div>
+                <p class="fs-5">+799</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5 bg-success">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="fs-5">Daily History</h1>
+        </div>
+        <div class="card-body"></div>
       </div>
     </div>
   </div>
@@ -232,11 +361,11 @@
         </div>
         </div>
         </div>
-
+       
       </main>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@6.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="index.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -253,7 +382,7 @@ function _firstchart() {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 6, 2, 3],
         borderWidth: 1
       }]
     },
@@ -277,7 +406,7 @@ function _secondchart() {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 6, 2, 3],
         borderWidth: 1
       }]
     },
@@ -299,7 +428,7 @@ function _thirdchart(){
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 6, 2, 3],
         borderWidth: 1
       }]
     },
@@ -320,7 +449,7 @@ function _fourthchart(){
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19, 3, 6, 2, 3],
         borderWidth: 1
       }]
     },
@@ -339,6 +468,6 @@ _firstchart();
 _secondchart();
 _thirdchart();
 _fourthchart();
-</script>-->
+</script>
 </body>
 </html>

@@ -1,15 +1,17 @@
 {
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
     "remixicon": "^4.6.0",
     "tippy.js": "^6.3.7"
   },
-  "type" :"module",
+  "type": "module",
   "name": "exp-track",
   "version": "1.0.0",
   "description": "Exp track",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
